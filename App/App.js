@@ -184,12 +184,10 @@ const removeHistoryHandler = () => {
 ////
   useEffect(() => {
       const fetchData = async () => {
-        if (roomname) {
         await storeMessage('-> ' + receive, roomname);
         await getMessages();
         if (receive.length > 0) {
           setReceive([]);
-        }
         }
       };
 
